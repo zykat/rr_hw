@@ -4,6 +4,7 @@ import time
 
 driver = webdriver.Chrome()
 
+# 1. Авторизация используя корректные данные (standard_user, secret_sauce)
 def test_login_correct():
     driver.get("https://www.saucedemo.com/")
 
@@ -17,7 +18,7 @@ def test_login_correct():
     login_button.click()
     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 
-
+# 2. Авторизация используя некорректные данные (user, user)
 def test_login_incorrect():
     driver.get("https://www.saucedemo.com/")
 
